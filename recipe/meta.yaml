@@ -1,6 +1,5 @@
 {% set version = '0.1.8' %}
 {% set posix = 'm2-' if win else '' %}
-{% set native = 'm2w64-' if win else '' %}
 
 package:
   name: r-mwcsr
@@ -11,8 +10,7 @@ source:
   sha256: 170d312ec68905c86e760551d7a35db8bce8246ace6a2ec5405530040eefdb6f
 
 build:
-  merge_build_host: True  # [win]
-  number: 0
+  number: 1
   rpaths:
     - lib/R/lib/
     - lib/
@@ -43,7 +41,6 @@ requirements:
     - r-rcpp
   run:
     - r-base
-    - {{ native }}gcc-libs         # [win]
     - r-igraph
     - r-rcpp
 
