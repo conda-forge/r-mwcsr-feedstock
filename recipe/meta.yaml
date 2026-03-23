@@ -1,4 +1,4 @@
-{% set version = '0.1.8' %}
+{% set version = "0.1.9" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -6,11 +6,11 @@ package:
   version: {{ version|replace("-", "_") }}
 
 source:
-  url:     {{ cran_mirror }}/src/contrib/Archive/mwcsr/mwcsr_{{ version }}.tar.gz
-  sha256: 170d312ec68905c86e760551d7a35db8bce8246ace6a2ec5405530040eefdb6f
+  url: {{ cran_mirror }}/src/contrib/Archive/mwcsr/mwcsr_{{ version }}.tar.gz
+  sha256: 72aeab469416ac515df2548ab2545d844d6395e3bd07b82d1b73d5355327fc26
 
 build:
-  number: 2
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
@@ -52,12 +52,8 @@ test:
 about:
   home: https://github.com/ctlab/mwcsr
   license: MIT
-  summary: "Algorithms for solving various Maximum Weight Connected Subgraph Problems, including
-    variants with budget constraints, cardinality constraints, weighted edges and signals.
-    The package represents an R interface to high-efficient solvers based on relax-and-cut
-    approach (\xC1lvarez-Miranda E., Sinnl M. (2017) <doi:10.1016/j.cor.2017.05.015>)
-    mixed-integer programming (Loboda A., Artyomov M., and Sergushichev A. (2016) <doi:10.1007/978-3-319-43681-4_17>)
-    and simulated annealing."
+  summary: "Algorithms for solving various Maximum Weight Connected Subgraph Problems, including variants with budget constraints, cardinality constraints, weighted edges and signals. The package represents an R interface to high-efficient solvers based on relax-and-cut approach (Álvarez-Miranda E., Sinnl M. (2017) <doi:10.1016/j.cor.2017.05.015>)
+    mixed-integer programming (Loboda A., Artyomov M., and Sergushichev A. (2016) <doi:10.1007/978-3-319-43681-4_17>) and simulated annealing."
   license_family: MIT
   license_file:
     - '{{ environ["PREFIX"] }}/lib/R/share/licenses/MIT'
