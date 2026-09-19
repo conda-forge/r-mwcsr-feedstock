@@ -1,4 +1,4 @@
-{% set version = "0.1.9" %}
+{% set version = "0.1.12" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -7,7 +7,7 @@ package:
 
 source:
   url: {{ cran_mirror }}/src/contrib/Archive/mwcsr/mwcsr_{{ version }}.tar.gz
-  sha256: 72aeab469416ac515df2548ab2545d844d6395e3bd07b82d1b73d5355327fc26
+  sha256: c9d75998c882ce4df869013a271518e44e2656972deb1b1fd2acec80158d5501
 
 build:
   number: 0
